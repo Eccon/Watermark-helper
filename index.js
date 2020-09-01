@@ -2,7 +2,7 @@ const minify = require('html-minifier').minify;
 const fs = require("fs");
 const Base64 = require('js-base64').Base64;
 
-fs.readFile('./watermark-helper.html', 'utf-8', (e, data) => {
+fs.readFile('./index.html', 'utf-8', (e, data) => {
     if (e) throw Error(`Read failed: ${e.message}`);
 
     let result = minify(data, {
